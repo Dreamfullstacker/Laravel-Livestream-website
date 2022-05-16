@@ -1,0 +1,127 @@
+.filter-toolbar {
+    flex: 1 1 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: .75rem 0 2rem;
+}
+
+
+@include media-breakpoint-down(md) {
+    .filter-toolbar {
+        display: none;
+
+    }
+}
+.filter-item {
+    margin-right: 2.5rem;
+    position: relative;
+    label {
+        color: $text-muted;
+        font-size: 12px;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .filter-value {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .filter-item-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-btn {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin-top: 2px;
+        margin-left: 15px;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.7);
+            left: 0;
+            top: 50%;
+            -webkit-transition: 0.2s ease;
+            -moz-transition: 0.2s ease;
+            transition: 0.2s ease;
+            margin-top: -5px;
+        }
+
+        &:after {
+            margin-top: 2px;
+            width: 10px;
+        }
+
+    }
+
+    .filter-item-content[aria-expanded="true"] .dropdown-btn:before {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -2px;
+        background-color: $theme;
+    }
+
+    .filter-item-content[aria-expanded="true"] .dropdown-btn:after {
+        margin-top: -2px;
+        width: 16px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background-color: $theme;
+    }
+
+    .dropdown-menu {
+        left: -20px !important;
+        margin-top: 10px;
+        background-color: $secondary;
+        padding: 1rem 0rem;
+
+        li {
+            font-size: 14px;
+            cursor: pointer;
+            padding: 4px 20px;
+
+            &:hover,
+            &.selected {
+                color: $theme;
+            }
+        }
+    }
+
+    .dropdown-menu.dropdown-2x.show {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 20rem;
+        width: 20rem;
+        li {
+
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+}
+
+.btn-apply {
+    border-radius: 100px;
+    padding: 14px 40px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@include media-breakpoint-down(md) {
+    .filter-toolbar {
+    }
+}

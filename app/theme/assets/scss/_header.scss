@@ -1,0 +1,219 @@
+.app-header {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-menu {
+        .nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #fff;
+
+            svg {
+                stroke: #fff;
+                stroke-width: 3px !important;
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            &:hover {
+                color: $theme;
+
+                svg {
+                    fill: $theme;
+                    stroke: $theme;
+                }
+            }
+
+        }
+    }
+
+    .navbar-user {
+        .nav-link {
+            font-size: 14px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #fff;
+            position: relative;
+
+            .on {
+                padding: 0px;
+                width: 8px;
+                height: 8px;
+                background-color: $warning;
+                border-radius: 100px;
+                position: absolute;
+                right: 7px;
+                top: 2px;
+            }
+
+            svg {
+                fill: #fff;
+                stroke: #fff;
+                stroke-width: 3px;
+                width: 18px;
+                height: 18px;
+            }
+
+            &:hover {
+                color: $theme;
+
+                svg {
+                    fill: $theme;
+                    stroke: $theme;
+                }
+            }
+        }
+
+        .nav-profile {
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                background-color: $secondaryActive;
+            }
+
+            .profile-text {
+                line-height: 1.4;
+                padding-left: 20px;
+                font-weight: 500;
+
+                .profile-head {
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: $text-muted;
+                }
+            }
+        }
+    }
+
+    .search-btn {
+        position: relative;
+
+        svg {
+            position: relative;
+            z-index: 101;
+        }
+    }
+
+    .search-header {
+        position: absolute;
+        right: -10px;
+        min-width: 300px;
+        top: -4px;
+        z-index: 100;
+        width: auto;
+
+        .app-search {
+            margin-left: 0px;
+            width: 100%;
+
+            input {
+
+                padding: 16px 20px 16px 30px !important;
+            }
+        }
+    }
+}
+
+.nav-user {
+    .nav-link {
+        font-size: 14px;
+        color: #fff;
+        position: relative;
+
+        .on {
+            padding: 0px;
+            width: 8px;
+            height: 8px;
+            background-color: $warning;
+            border-radius: 100px;
+            position: absolute;
+            right: 7px;
+            top: 2px;
+        }
+
+        svg {
+            fill: #fff;
+            stroke: #fff;
+            stroke-width: 3px;
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            color: $theme;
+
+            svg {
+                fill: $theme;
+                stroke: $theme;
+            }
+        }
+    }
+
+    .nav-profile {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            background-color: $secondaryActive;
+            width: 50px;
+            height: 50px;
+        }
+
+        .profile-text {
+            line-height: 1.4;
+            padding-left: 20px;
+            font-weight: 500;
+
+            .profile-head {
+                font-weight: normal;
+                font-size: 12px;
+                color: $text-muted;
+            }
+        }
+    }
+}
+
+.header-search-fixed {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1090;
+
+    .app-search {
+        width: 500px;
+        background-color: #fff !important;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .app {
+        padding: 0;
+    }
+
+    .header-search-fixed {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        transform: none;
+    }
+
+    .nav-profile {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .app-header {
+        .navbar-user {
+            display: none;
+
+        }
+    }
+}

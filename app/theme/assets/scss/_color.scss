@@ -1,0 +1,40 @@
+@each $color,
+$value in $brand-colors {
+    .bg-#{$color} {
+        color: #fff !important;
+        background-color: $value !important;
+
+        svg {
+
+            fill: #fff !important;
+        }
+
+        &:hover {
+            color: #fff !important;
+            background-color: darken($value, 4%) !important;
+        }
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .bg-#{$color}-lt {
+        color: $value !important;
+        background-color: theme-color-level($color, 9%) !important;
+        a {
+            color: $value !important;
+            font-weight: 500;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+.btn-theme-lt {
+    background-color: $secondary;
+    color: $body-color;
+    &:hover {
+        background-color: $theme;
+        color: #fff;
+    }
+}

@@ -1,0 +1,416 @@
+
+.form-control,
+.custom-select {}
+
+@each $color,
+$value in $theme-colors {
+    .bg-#{$color}-lt {
+        color: $value !important;
+        background-color: theme-color-level($color, 9%) !important;
+        a {
+            color: $value !important;
+            font-weight: 500;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+.btn-theme {
+    background-color: $theme;
+    color: #fff;
+    &:hover {
+        color: #fff;
+    }
+}
+.badge {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.dropdown-menu {
+    color: inherit;
+    border-color: transparent;
+    background-color: $secondary !important;
+    border-radius: $border-radius;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    a {
+        color: $link-color;
+        font-size: 12px;
+
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+}
+
+.dropdown-header {
+    color: $text-muted;
+}
+
+.dropdown-divider {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-color: lighten($secondary, 1%);
+}
+
+.card {
+    margin-bottom: 10px;
+    border-width: 0;
+    background-color: $secondary;
+
+    .card-header,
+    .card-footer {
+        background-color: transparent;
+        border-width: 0;
+
+        svg {
+            fill: $text-muted;
+            width: 16px !important;
+            height: 16px !important;
+        }
+    }
+}
+.card-statistic {
+    .card-body {
+        display: flex;
+        align-items: center;
+        svg {  
+            stroke-width:3 !important;
+            stroke: #fff;
+            width: 36px !important;
+            height: 36px !important;
+            margin-right: 25px;
+        }
+        > div {
+            line-height: 1.4;
+        }
+        .count {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .text {
+            font-size: 12px;
+            color: $body-color;
+        }
+    }
+}
+.card-document {
+    border-bottom: dashed 1px $secondary;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+
+    .attr {
+        color: $warning;
+        margin-right: 10px;
+        font-weight: 500;
+    }
+
+    .text {
+        font-size: 12px;
+
+    }
+}
+
+.card-tool {
+    .card-body {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    i {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .head {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .text {
+        margin-top: 5px;
+        color: rgba(#fff, .5);
+    }
+
+    &:hover {
+        background-color: $theme;
+        color: #fff;
+    }
+}
+
+.card-drag {
+    background-color: transparent;
+    border: dashed 2px $secondary;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-close {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    border: 0px;
+    color: $body-color;
+    background-color: transparent;
+
+    svg {
+        fill: $body-color;
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    &:hover {
+        outline: none;
+        color: $theme;
+
+        svg {
+            fill: $theme;
+        }
+    }
+}
+
+.modal-confirm {
+    color: #636363;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    background-color: $body-bg;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-body {
+    color: #999;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+    color: #999;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.modal-confirm .btn,
+.modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary {
+    background: #c1c1c1;
+}
+
+.modal-confirm .btn-secondary:hover,
+.modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+
+// card video
+.card-video {
+    background-color: $secondary;
+    margin-bottom: 10px;
+    border: 0px;
+
+    .card-header {
+        border: 0px;
+        display: flex;
+        align-items: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        .name {
+            flex: 1 1 auto !important;
+            cursor: pointer;
+
+            span {
+                font-size: 12px;
+                display: inline-block; 
+                color: $text-muted;
+            }
+        }
+
+        .sortable-move {
+            margin-right: 20px;
+            position: relative;
+            top: -1px;
+            cursor: move;
+        }
+
+        .name-placeholder {
+            cursor: pointer;
+        }
+    }
+
+    .custom-select,
+    .form-control {
+        background-color: $secondaryActive;
+    }
+    .form-control:focus {
+        background-color: #fff; 
+    }
+
+}
+
+// card actor
+.card-list {
+    background-color: $secondary;
+    margin-bottom: 10px;
+    border: 0px;
+
+    .card-header {
+        border: 0px;
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .name {
+            margin-left: 20px;
+            flex: 1 1 auto !important;
+            cursor: pointer;
+
+            span {
+                font-size: 12px;
+                display: inline-block;
+                margin-left: 10px;
+                color: $text-muted;
+            }
+        }
+
+        .sortable-move {
+            margin-right: 20px;
+            position: relative;
+            top: -1px;
+            cursor: move;
+        }
+
+        .name-placeholder {
+            cursor: pointer;
+        }
+    }
+
+    .custom-select,
+    .form-control {
+        background-color: $secondaryActive !important;
+        color: #fff;
+    }
+    .form-transparent {
+        background-color: $secondary; 
+        height: auto;
+    }
+
+}
+
+
+
+.btn-edit,
+.btn-remove {
+    font-size: 14px;
+    border: 0px;
+
+    display: inline-flex;
+    align-items: center;
+    color: $text-muted;
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+        outline: none;
+    }
+
+    &:hover i {
+        color: $danger;
+    }
+}
+
+.btn-edit {
+    margin-right: 15px;
+
+    &:hover i {
+        color: $primary;
+    }
+}
+
+.block {
+    background-color: $secondary;
+    border-radius: $border-radius;
+}
+.settings-accordion {
+    .card {
+        .form-control {
+            background-color: $secondaryActive;
+        }
+        .card-body {
+            padding-top: 5px;
+        }
+    }
+}

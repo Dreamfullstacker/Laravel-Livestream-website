@@ -1,0 +1,49 @@
+body {
+	overflow-x: hidden;
+	background-color: $body-bg;
+  &.boxed {
+    
+  background-color: var(--background-color);
+  }
+}
+
+.body-lock {
+  overflow: hidden;
+}
+::-moz-selection {
+  color: #fff;
+  background: $theme;
+}
+
+::selection {
+  color: #fff;
+  background: $theme;
+}
+svg.icon {
+    fill: #fff;
+    stroke: #fff;
+    width: 18px;
+    height: 18px;
+}
+
+$Textsizes: 10,
+12,
+14,
+16,
+18,
+20,
+22,
+24,
+28,
+32,
+36,
+42,
+48,
+56,
+64;
+
+@each $Textsize in $Textsizes {
+    .text-#{$Textsize} {
+        font-size: #{$Textsize}px !important;
+    }
+}

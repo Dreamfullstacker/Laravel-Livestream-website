@@ -1,0 +1,376 @@
+.app-video {
+    h1 {
+        font-size: 28px;
+        color: #fff;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+
+    .app-video-detail {
+
+        display: flex;
+        align-items: flex-start;
+        margin: 2rem 0;
+
+        .cover {
+            flex: 0 0 120px;
+            max-width: 120px;
+        }
+
+        .content {
+            flex: 1 1 auto;
+            max-width: 100%;
+            padding: 0px 0 0 30px;
+        }
+
+        .content-header {
+            display: flex;
+        }
+
+        .caption {
+
+            flex: 1 1 auto;
+            max-width: 100%;
+        }
+
+        .video-action {
+            flex: 0 0 140px;
+            max-width: 140px;
+
+            .video-view {
+                text-align: right;
+
+                .view-text {
+                    font-size: 16px;
+
+                    span {
+                        margin-left: 10px;
+                        color: $text-muted;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .video-reaction-bar {
+                height: 5px;
+                border-radius: 100px;
+                background-color: $secondary;
+
+                margin: 5px 0 10px;
+                display: flex;
+
+                & .like {
+                    height: 100%;
+                    border-radius: 100px;
+                    background-color: $theme;
+                }
+
+                & .dislike {
+                    height: 100%;
+                }
+            }
+
+            .video-reaction {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &>div {
+                    display: inline-flex;
+                    align-items: center;
+
+                    &>span {
+                        font-size: 12px;
+                        margin-left: 10px;
+                        color: $text-muted;
+                    }
+
+                    &.active,
+                    &:hover {
+                        cursor: pointer;
+                        color: $theme;
+                    }
+                }
+            }
+        }
+
+        .category {
+            margin-bottom: 5px;
+            font-size: 12px;
+
+            a {
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+
+
+        .video-attr {
+            margin: 10px 0;
+            display: flex;
+            font-size: 12px;
+
+            .attr {
+                color: $text-muted;
+                margin-right: 20px;
+                flex: 0 0 80px;
+                max-width: 80px;
+            }
+
+            .text {
+                flex: 1 1 auto;
+                max-width: 100%;
+
+                a {
+                    margin-right: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .btn-theme {
+            margin: 10px 0;
+            padding: 12px 25px;
+            border-radius: 100px;
+        }
+    }
+
+    .embed-responsive {
+        background-color: $secondary;
+        border-radius: $border-radius;
+    }
+
+    .video-header {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        position: relative;
+
+        .btn-svg {
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            padding-left: 0px;
+            margin-right: 20px;
+            color: $body-color;
+
+            &:focus {
+                outline: none;
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 15px;
+                stroke: $body-color;
+                fill: $body-color;
+                position: relative;
+            }
+
+            &.active,
+            &:hover {
+                color: $theme;
+
+                svg {
+                    stroke: $theme;
+                    fill: $theme;
+                }
+            }
+        }
+
+
+        .nav-player-select {
+            margin-right: 30px;
+
+            .dropdown-toggle {
+                background-color: $secondary;
+                padding: 14px 25px;
+                display: inline-block;
+                border-radius: $border-radius;
+                color: $body-color;
+
+                span {
+                    color: $theme;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+
+            .dropdown-menu {
+                width: 18rem;
+            }
+        }
+
+        .dropdown-share {
+            background-color: transparent;
+            padding: 0px;
+            margin-top: 10px;
+            min-width: 18rem;
+
+            a {
+                width: 40px;
+                height: 40px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $secondary;
+                border-radius: 100px;
+                margin-right: 5px;
+
+                svg {
+                    fill: #fff;
+                    width: 14px;
+                    height: 14px;
+                }
+
+                &.bg-whatsapp svg {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &:hover {
+                    background-color: $theme;
+
+                    svg {
+                        fill: #fff;
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
+        .dropdown-source {
+            display: flex;
+            align-items: center;
+            padding: 5px 25px;
+            justify-content: space-between;
+
+            .name {
+                margin-right: 10px;
+            }
+
+            .language {
+                font-size: 12px;
+                color: $text-muted;
+            }
+        }
+
+        .dropdown-collection {
+            width: 16rem;
+            margin-top: 10px;
+
+            .dropdown-header {
+                padding: 6px 20px;
+            }
+
+            .btn-container,
+            .switch-container {
+                padding: 2px 20px;
+            }
+
+            .custom-select {
+                background-color: $secondaryActive;
+            }
+
+            .switch-label {
+                max-width: 170px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .app-video {
+        h1 {
+            font-size:20px;
+            margin-bottom: 5px;
+        }
+
+        .app-video-detail {
+            margin: 1rem 0;
+
+            .cover {
+                display: none;
+            }
+
+            .content {
+                padding: 0px;
+            }
+
+            .video-action {
+
+                flex: 1 1 auto;
+                max-width: 100%;
+                margin-bottom: 1rem;
+
+                .video-view {
+                    text-align: left;
+                }
+
+                .video-reaction-bar {
+                    display: none;
+                }
+
+                .video-reaction {
+                    margin-top: .5rem;
+                    justify-content: flex-start;
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .content-header {
+                flex-direction: column;
+            }
+        }
+
+
+        .video-header {
+
+            .btn-svg {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.video-episodes {
+    background-color: $secondary;
+    border-radius: $border-radius;
+
+    .heading {
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .video-episode {
+        padding: 10px 20px;
+        font-size: 12px;
+
+        &:hover,
+        &.active {
+            color: $theme;
+        }
+    }
+}

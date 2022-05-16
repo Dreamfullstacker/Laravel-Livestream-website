@@ -1,0 +1,111 @@
+$loader-height:100px !default;
+$loader-width:100px !default;
+$loader-color:$primary !default;
+$loader-duration:1.0s;
+
+.loader-body {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        content: "";
+        z-index: 2000;
+        background-color: rgba($body-bg, .8);
+    }
+
+    & .loader {
+        display: block;
+    }
+}
+
+.loader {
+    position: fixed;
+    z-index: 2001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    .spinner {
+        -webkit-animation: rotation 1.35s linear infinite;
+        animation: rotation 1.35s linear infinite;
+    }
+
+    .circle {
+        stroke-dasharray: 180;
+        stroke-dashoffset: 0;
+        stroke: $primary;
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        -webkit-animation: turn 1.35s ease-in-out infinite;
+        animation: turn 1.35s ease-in-out infinite;
+    }
+}
+
+
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+
+@-webkit-keyframes turn {
+    0% {
+        stroke-dashoffset: 180;
+    }
+
+    50% {
+        stroke-dashoffset: 45;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: 180;
+        -webkit-transform: rotate(450deg);
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes turn {
+    0% {
+        stroke-dashoffset: 180;
+    }
+
+    50% {
+        stroke-dashoffset: 45;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: 180;
+        -webkit-transform: rotate(450deg);
+        transform: rotate(450deg);
+    }
+}

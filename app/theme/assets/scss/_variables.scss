@@ -1,0 +1,138 @@
+// Colors
+$primary:     			#3dd598;
+$success:     			#48bb78;
+$dark:        			#18191A; 
+$light:   				#E8E9EB; 
+$secondary:     		#101010;
+$secondaryActive: 		#222;
+$white: 				#fff;
+$text-muted:    		#9999a5; 
+$warning:       		#ffc526;
+$danger:           		#fd4056;
+
+$theme:     			var(--theme-color);
+
+$body-bg:       		#000;
+$body-color:       		#B5B5BE;
+$link-color: 			#B5B5BE;
+$link-hover-color: 		$theme;
+$border-color: lighten($dark,3%);
+$enable-caret:				false;
+$yiq-contrasted-threshold:  170 !default;
+// Font
+$font-family-base:			-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-serif:         Georgia, "Times New Roman", Times, serif;
+$link-hover-decoration:               none;
+
+$line-height-base:            1.6 !default;
+$line-height-lg:              1.6 !default;
+$line-height-sm:              1.6 !default;
+
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           400 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            600 !default;
+$font-weight-bolder:          700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+  
+
+$font-size-base:                      0.875rem;
+$font-size-sm:                      0.775rem;
+$font-size-lg:                      0.875rem; 
+
+$tooltip-opacity:	 			1;
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .3rem !default;
+
+$tooltip-color:                     #fff !default;
+$tooltip-bg:                        $secondaryActive !default;
+
+
+// Size 
+$navbar-height:     70px;
+$navbar-width:      300px;
+
+$border-radius:               		6px !default;
+$border-radius-sm:               	6px !default;
+$border-radius-lg:               	6px !default;
+$navbar-height: 					62px;
+$navbar-width: 						300px;
+$navbar-nav-link-padding-x:         1rem !default;
+
+$input-btn-focus-width: 0;
+$input-bg: $secondary !default;
+$input-color: $body-color !default;
+$input-border-color: $white !default;
+$input-border-width:                    0px !default;
+$input-placeholder-color: $text-muted;
+
+$custom-select-indicator-color: #fff;
+$custom-control-indicator-border-width: 0;
+$custom-file-button-bg:             transparent !default;
+
+$input-btn-border-width:		0 !default;
+$input-btn-padding-y:         .775rem !default;
+$input-btn-padding-x:         1.25rem !default;
+$input-btn-padding-y-sm:      .575rem !default;
+$input-btn-padding-x-sm:      1.25rem !default;
+$input-btn-padding-y-lg:      1rem !default;
+$input-btn-padding-x-lg:            1.25rem !default;
+
+$card-bg:                           $secondary !default;
+
+
+$grid-row-columns:            8 !default;
+$grid-gutter-width:           20px !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1170px,
+  xl: 1270px
+) !default;
+
+$modal-content-bg:                  $body-bg;
+$modal-inner-padding:               4rem;
+$modal-content-border-width:        0 !default;
+$modal-content-border-radius:       10px !default;
+$modal-content-box-shadow-xs:       none !default;
+$modal-content-box-shadow-sm-up:    none !default;
+
+$modal-backdrop-bg:                 $body-bg !default;
+$modal-backdrop-opacity:            1 !default;
+
+ 
+// dropdown
+
+$dropdown-bg:                       $secondary !default;
+$dropdown-link-color:               $body-color !default;
+$dropdown-link-hover-color:         $theme !default;
+$dropdown-link-hover-bg:            transparent !default;
+$dropdown-link-active-bg:           none;
+$dropdown-link-active-color:        $theme !default;
+$dropdown-divider-bg:               transparent !default;
+$dropdown-divider-margin-y:         .25rem !default;
+ 
+$component-active-color: $body-bg;
+$custom-control-indicator-checked-bg: $theme;
+// brands
+
+$facebook:      #3b5999 !default;
+$twitter:       #1da1f2 !default; 
+$instagram:     #e4405f !default;
+$pinterest:     #bd081c !default;
+$youtube:       #cd201f !default;
+$whatsapp:       #25D366 !default;
+
+$brand-colors: () !default;
+$brand-colors: map-merge((
+    "facebook":     $facebook,
+    "twitter":      $twitter, 
+    "instagram":    $instagram,
+    "whatsapp":    $whatsapp,
+    "pinterest":    $pinterest,
+    "youtube":      $youtube
+), $brand-colors);
+

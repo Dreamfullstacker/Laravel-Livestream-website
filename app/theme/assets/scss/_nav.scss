@@ -1,0 +1,429 @@
+.nav-aside {
+    margin: 0;
+    pointer-events: inherit;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 0 0 230px;
+    max-width: 230px;
+    position: sticky;
+
+
+    & ul {
+        padding-left: 0;
+        padding-right: 0;
+        list-style: none;
+        display: block;
+
+        .nav-header {
+            padding: 10px 1rem;
+        }
+
+        &>li.active {
+            position: relative;
+
+
+
+            >a {
+                color: $theme;
+
+                .nav-icon {
+                    fill: $theme;
+                    stroke: $theme;
+                }
+
+                .nav-caret:after {
+                    transform: rotate(180deg);
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        a {
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            padding: 5px 1rem;
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+
+            &:hover {
+                color: #fff;
+
+                .nav-icon {
+                    fill: #fff;
+                    stroke: #fff;
+                }
+            }
+        }
+
+    }
+
+    & .footer {
+        padding: 9px 0px 20px;
+
+        & a {
+            font-size: 14px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .nav-aside {
+        flex: 0 0 160px !important;
+        max-width: 160px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .nav-aside {
+        width: 100% !important;
+        max-width: 100%;
+        height: 100% !important;
+        top: 0 !important;
+        left: 0px;
+        position: fixed;
+        z-index: 1050 !important;
+        display: none;
+        opactiy: 0;
+        background-color: $body-bg;
+        padding: 12px 10px 20px;
+
+        .dropdown-menu a {
+            font-weight: normal;
+        }
+
+        &.show {
+            width: 100% !important;
+            top: 0;
+            bottom: 0;
+
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+
+            svg {
+
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+.nav-icon {
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    fill: $body-color;
+    stroke: $body-color;
+    stroke-width: 3px !important;
+    top: 0px;
+}
+
+.nav-header {
+    margin-top: 20px;
+    color: $text-muted;
+    font-size: 12px;
+
+    &.trend {
+        font-weight: 500;
+        font-size: 14px;
+        color: $theme;
+    }
+}
+
+.nav-filter {
+    padding: 0 0px;
+    margin-bottom: 2rem;
+
+    label,
+    a {
+        padding: 6px 0px;
+        font-weight: 500;
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        border-radius: $border-radius;
+
+        &.active {
+            color: $theme;
+        }
+    }
+
+    input[type="radio"]:checked+label {
+        color: $theme;
+    }
+}
+
+
+.form-nav-filter {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 2px;
+        background-color: $secondary;
+    }
+
+    .btn-radio {
+        color: $body-color;
+        padding: 13px 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+        }
+
+        &:hover,
+        &.active {
+            color: $theme !important;
+        }
+
+        &.active:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0;
+            background-color: $theme;
+            opacity: .045;
+        }
+
+        &.active:before {
+            left: 0;
+            right: 0;
+            border-bottom-color: $theme;
+        }
+
+    }
+}
+
+.nav-filter-column {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+
+    li {
+
+        flex: 0 0 48%;
+        max-width: 48%;
+        font-size: 12px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .app-filter {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    .nav-filter {
+        padding: 20px 20px;
+    }
+}
+
+// social
+.nav-social {
+    a {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary;
+        border-radius: 18px;
+        margin-right: 5px;
+
+        svg {
+            fill: $body-color;
+            stroke: $body-color;
+            width: 14px;
+            height: 14px;
+        }
+
+        &:hover {
+            background-color: $theme;
+
+            svg {
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+
+.nav-active-border {
+
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 1px;
+        background-color: $secondary;
+    }
+
+    li>a,
+    .nav-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: relative;
+        font-weight: 500;
+        padding: 15px 25px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+            @include transition(all 0.2s ease-in-out);
+        }
+
+        &.active {
+            color: $theme;
+        }
+
+        &.active:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0;
+            background-color: $theme;
+            opacity: .045;
+        }
+
+        &.active:before {
+            left: 0;
+            right: 0;
+            border-bottom-color: $theme;
+        }
+    }
+
+    li.active>a {
+        &:before {
+            left: 1rem;
+            right: 1rem;
+            border-bottom-color: $theme;
+        }
+    }
+
+    &.top {
+
+        li.active>a,
+        .nav-link {
+            &:before {
+                bottom: auto;
+                top: 0;
+            }
+        }
+    }
+
+    &.right {
+
+        li.active>a,
+        .nav-link {
+            &:before {
+                bottom: 0px;
+                right: 0px;
+                left: auto;
+                top: 0;
+                border-bottom-width: 0;
+                border-right-width: 3px;
+                border-right-style: solid;
+                border-right-color: transparent;
+            }
+        }
+    }
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.search-btn {
+    position: relative;
+    cursor: pointer;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 3px;
+    }
+}
+
+.nav-trend {
+    margin-top: 1rem;
+
+    .nav-header {
+        font-weight: 600;
+        color: $theme;
+    }
+
+    .nav-content {
+        align-items: flex-start;
+        font-size: .785rem;
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+
+        svg {
+            width: 12px;
+            height: 12px;
+            stroke-width: 3px;
+            margin-right: 10px;
+        }
+
+        .view {
+            display: flex;
+            align-items: center;
+            font-size: .75rem;
+            font-weight: normal;
+            color: $text-muted;
+
+        }
+    }
+}

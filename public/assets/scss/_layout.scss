@@ -1,0 +1,204 @@
+.app {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    & .app-header {
+        z-index: 1035 !important;
+        transition: background-color 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: $navbar-height;
+
+        background-color: $body-bg;
+
+        & .navbar {
+            padding: 0 25px;
+            height: $navbar-height;
+        }
+    }
+
+    & .app-navbar {
+
+        padding: 5px 20px;
+        height: $navbar-height;
+        min-height: $navbar-height;
+        display: flex;
+        justify-content: space-between;
+
+        .navbar-brand svg {
+            fill: $theme;
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .frontend {
+            margin-top: 10px;
+            display: inline-block;
+
+            svg {
+                fill: $text-muted;
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            &:hover {
+                color: $theme;
+
+                svg {
+                    fill: $theme;
+                }
+            }
+        }
+    }
+
+    & .app-aside-right {
+        padding-left: 30px;
+        flex: 0 0 300px;
+        max-width: 300px;
+    }
+
+    & .app-aside-right-sm {
+        padding-left: 30px;
+        flex: 0 0 240px;
+        max-width: 240px;
+    }
+
+    & .app-aside {
+        z-index: 1035;
+    }
+
+    & .nav-aside {
+        padding-top: 10px;
+    }
+
+    & .app-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    & .app-content {
+        flex: 0 0 calc(100% - 220px);
+        max-width: calc(100% - 220px);
+        padding: 15px 30px 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        & .app-aside-right {
+            padding-left: 0px;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        & .app-content {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0px 20px 40px;
+        }
+
+        .navbar-brand {
+            margin-right: 0px;
+        }
+
+        & .navbar {
+            padding: 10px 0px;
+
+            & .app-navbar {
+                padding: 0px 30px;
+                height: auto;
+                min-height: auto;
+            }
+        }
+
+        & .container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        & .nav-aside .app-navbar {
+            justify-content: flex-start;
+
+            .navbar-brand {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    #filter .row>div {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.toolbar {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin: 0 -0.25rem 1rem;
+
+    .dropdown-menu {
+        border: 0px;
+        border-radius: $border-radius;
+        width: 500px;
+        margin-top: 8px;
+        background-color: lighten($secondary, 3%) !important;
+
+        .btn {
+            padding: 10px 30px;
+        }
+    }
+
+    >* {
+        margin: 0 0.25rem;
+    }
+
+    & .btn-filter {
+        width: 46px;
+        height: 46px;
+        padding: 0px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $input-bg;
+        color: $text-muted !important;
+        font-size: 14px;
+        border-radius: $border-radius;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    & input {
+
+        border: 0px;
+        border-radius: $border-radius;
+        height: 46px;
+
+        &:focus {
+            box-shadow: none;
+            background-color: #fff;
+        }
+    }
+
+    &.toolbar-mx {
+        margin: 0 -0.5rem;
+
+        >* {
+            margin: 0 0.5rem;
+        }
+    }
+
+    svg {
+        fill: $text-muted;
+        width: 14px !important;
+        height: 14px !important;
+    }
+}

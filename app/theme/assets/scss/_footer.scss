@@ -1,0 +1,83 @@
+// footer
+.app-footer {
+    padding: 2rem 1rem;
+
+    .nav-head {
+        color: $text-muted;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .brand {
+        display: block;
+        svg {
+            fill: $theme;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .nav-col-2 {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+
+        a {
+            padding: 3px 10px 3px 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+            max-height: $line-height-base * 18px * 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .nav-col-3 {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+
+        a {
+            padding: 3px 10px 3px 0;
+            flex: 0 0 30%;
+            max-width: 30%;
+            max-height: $line-height-base * 18px * 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .footer-text {
+        font-size: 12px;
+        color: $text-muted;
+
+        a {
+            color: $theme;
+        }
+    }
+
+    .nav-social {
+        a {
+            width: 44px;
+            height: 44px;
+            border-radius: 20px;
+
+            svg {
+                fill: $body-color;
+                stroke: $body-color;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .app-footer {
+        display: none;
+    }
+}

@@ -1,0 +1,99 @@
+.ads-skin {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    z-index: 0;
+    background-color: var(--theme-color);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &+.container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+
+        .app {
+            padding: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .ads-skin {
+        display: none !important;
+
+        &+.container {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .app {
+                padding: 0px;
+            }
+        }
+    }
+}
+
+.ads-sticky {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    left: 0px;
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+
+    &.show {
+        display: flex !important;
+    }
+
+    .ads-close {
+        position: absolute;
+        top: -34px;
+        padding: 5px 15px;
+        cursor: pointer;
+        border-radius: 100px;
+        background-color: rgba($body-bg, .75);
+        border: 2px solid rgba(255, 255, 255, .2);
+        color: #fff;
+        font-size: 10px;
+        font-weight: 500;
+
+        &:hover {
+            background-color: #fff;
+            border-color: #fff;
+            color: $body-bg;
+        }
+    }
+}
+
+.ads-300 {
+    width: 300px;
+    overflow: hidden;
+    background-color: $secondary;
+    border-radius: $border-radius;
+}
+
+.ads-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border-radius: $border-radius;
+        max-width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        overflow: hidden;
+        border: 0px;
+        width: 100%;
+    }
+}

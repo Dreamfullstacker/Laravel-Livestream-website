@@ -1,0 +1,115 @@
+// Colors
+$primary:     			#3dd598;
+$success:     			#1db954;
+$dark:        			#18191A; 
+$light:   				#E8E9EB; 
+$secondary:     		#101010;
+$secondaryActive: 		#222;
+$white: 				#fff;
+$text-muted:    		#969696; 
+$warning:       		#ffc526;
+$danger:           		#fd4056;
+
+$theme:     			var(--theme-color);
+
+$body-bg:       		#000;
+$body-color:       		#B5B5BE;
+$link-color: 			#B5B5BE;
+$link-hover-color: 		$theme;
+$border-color: lighten($dark,3%);
+$enable-caret:				false;
+$yiq-contrasted-threshold:  170 !default;
+
+// Font
+$font-family-base:			-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-serif:         Georgia, "Times New Roman", Times, serif;
+$link-hover-decoration:               none;
+
+$line-height-base:            1.6 !default;
+$line-height-lg:              1.6 !default;
+$line-height-sm:              1.6 !default;
+
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           400 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            500 !default;
+$font-weight-bolder:          700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+  
+
+$font-size-base:                      0.875rem;
+$font-size-sm:                      0.775rem;
+$font-size-lg:                      0.875rem; 
+
+$tooltip-opacity:	 			1;
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .3rem !default;
+
+$tooltip-color:                     #fff !default;
+$tooltip-bg:                        $secondaryActive !default;
+$modal-content-bg: $secondary;
+// Size 
+
+$border-radius:               		5px !default;
+$border-radius-sm:               	5px !default;
+$border-radius-lg:               	5px !default;
+$navbar-height: 					62px;
+$navbar-width: 						300px;
+$navbar-nav-link-padding-x:         1rem !default;
+
+$input-focus-bg:                        #fff !default;
+$input-focus-color:                     $secondary !default;
+$input-btn-focus-width: 0;
+$input-bg: $secondary !default;
+$input-disabled-bg: $secondary !default;
+$input-color: $body-color !default;
+$input-border-color: $white !default;
+$input-border-width:                    0px !default;
+$input-placeholder-color: $text-muted;
+
+$custom-select-indicator-color: #fff;
+$custom-control-indicator-border-width: 0;
+$custom-file-button-bg:             transparent !default;
+$input-btn-border-width:		0 !default;
+$input-btn-padding-y:         .875rem !default;
+$input-btn-padding-x:         1.25rem !default;
+$input-btn-padding-y-sm:      .575rem !default;
+$input-btn-padding-x-sm:      1.25rem !default;
+$input-btn-padding-y-lg:      1rem !default;
+$input-btn-padding-x-lg:            1.25rem !default;
+
+
+$grid-gutter-width:           20px !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+$modal-backdrop-bg:                 $body-bg !default;
+$modal-backdrop-opacity:            1 !default;
+$modal-content-border-width: 0px;
+
+
+$ui-check-size:                  14px;
+$ui-check-md-size:               20px;
+$ui-check-lg-size:               24px;
+$ui-check-sign-size:             6px;
+$ui-check-sign-color:            $primary;
+$ui-check-border-width:          1px;
+$ui-check-border-radius:         4px;
+$ui-check-border:        		 rgba(135, 150, 165, 0.35);
+
+
+$card-inner-border-radius: $border-radius;

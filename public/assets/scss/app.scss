@@ -1,0 +1,26 @@
+@import "_variables.scss";
+
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";  
+@import "bootstrap/bootstrap.scss";
+
+// plugin 
+
+@import "plugin/selectize/selectize.bootstrap4.scss";
+@import "plugin/snackbar.scss";
+@import "plugin/colorpicker.scss";
+@import "plugin/summernote/summernote.scss"; 
+
+@import "_font.scss";
+@import "_body.scss";
+@import "_bs.scss";
+@import "_form.scss";
+@import "_aside.scss";
+@import "_loading.scss";
+@import "_nav.scss";
+@import "_layout.scss";
+@import "_list.scss";
+@import "_media.scss";
+@import "_install.scss";

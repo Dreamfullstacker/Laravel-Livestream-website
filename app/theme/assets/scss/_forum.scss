@@ -1,0 +1,119 @@
+.forum-filter {
+    margin-bottom: 2rem;
+
+    .btn {
+        margin-right: 20px;
+        padding: 15px 40px;
+    }
+
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+.forum-detail {
+    display: flex;
+
+    .forum-avatar {
+        flex: 0 0 50px;
+        max-width: 50px;
+        position: relative; 
+        z-index: 2;
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background-color: $secondary;
+            border-radius: 100px;
+            font-size: 18px;
+        }
+
+        svg {
+            width: 70px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+
+        circle {
+            stroke: $theme;
+            stroke-width: 2;
+            stroke-linecap: round;
+            fill: none;
+            animation: circle-chart-fill 2s reverse;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+    }
+
+    .forum-content {
+
+        flex: 1 1 auto;
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .forum-footer {
+        font-size: 12px;
+        color: $text-muted;
+
+        a {
+            color: $text-muted;
+        }
+
+        .user {
+            color: $warning;
+        }
+    }
+
+    .forum-post {
+        margin: 1rem 0;
+
+        .head {
+            font-size: 12px;
+            color: $text-muted;
+        }
+
+        .post-content {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            .cover {
+                flex: 0 0 50px;
+                max-width: 50px;
+            }
+            .flex-fill {
+                flex: 1 1 auto;
+                max-width: 100%;
+                padding: 0 20px;
+                .name {
+                    font-weight: 500;
+                    color: #fff;
+                }
+                .category {
+                    font-size: 12px;
+                    color: $text-muted;
+                }
+            }
+            &:hover .name {
+                color: $theme;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin: 1rem 0 2rem;
+    }
+}

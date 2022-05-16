@@ -1,0 +1,142 @@
+.media {
+    position: relative;
+    display: flex;
+    padding: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $secondaryActive;
+    overflow: hidden;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+        display: block;
+        content: '';
+        padding-top: 100%;
+    }
+
+}
+
+.media-cover-temp {
+    &:after {
+        padding-top: 150%;
+    }
+}
+
+.media-actor {
+    &:after {
+        padding-top: 100%;
+    }
+}
+
+.media-episode {
+    &:after {
+        padding-top: 56.25%;
+    }
+}
+.media-cover {
+
+    &:after {
+        padding-top: 150%;
+    }
+}
+.media-slide {
+    &:after {
+        padding-top: 45%;
+    }
+}
+
+.media-select {
+    padding: 50px;
+    background-color: $secondary;
+    border-radius: $border-radius;
+    cursor: pointer;
+    position: relative;
+
+    .media-remove,
+    .media-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: $body-bg;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        border-radius: 100px;
+        backdrop-filter: blur(4px);
+        background: rgba(255, 255, 255, 0.5);
+
+        svg {
+            fill: $body-bg;
+            width: 14px !important;
+            height: 14px !important;
+        }
+
+        &:hover {
+            background-color: $primary;
+            color: #fff;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+
+    .media-remove {
+        left: 70px;
+
+        &:hover {
+            background-color: $danger;
+            color: #fff;
+        }
+    }
+
+    .media-icon {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -48%);
+        color: $body-bg;
+        font-size: 42px;
+    } 
+
+    &.media-selected {
+
+        .media-icon,
+        .media-text {
+            display: none;
+        }
+    }
+}
+
+.avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $secondaryActive;
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+
+    &.avatar-sm {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+}

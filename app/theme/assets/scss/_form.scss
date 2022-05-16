@@ -1,0 +1,134 @@
+.custom-label {
+    font-size: 12px;
+    color: $text-muted;
+}
+textarea {
+    resize: none;
+}
+.more {
+	font-size: 12px;
+	color: $text-muted;
+	cursor: pointer;
+	&:hover {
+		color: $theme;
+	}
+}
+
+
+
+/*
+Switch
+*/
+
+.switches-list .switch-container {
+    width: 100%;
+
+    &:last-child label {
+        margin-bottom: 0;
+    }
+}
+
+.switch-container {
+    display: block;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+label.switch {
+    position: relative;
+    height:18px;
+    padding-left: 45px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 0px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.switches-list .switch-container label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    line-height: $line-height-base;
+}
+
+.switch-button {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    background-color: $secondaryActive;
+    border-radius: 50px;
+    transition: 0.4s;
+    margin: 0 7px 0 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.switch {
+    span.switch-text {
+        display: block;
+        padding-left: 48px;
+        font-size: $font-size-base;
+        line-height: 22px;
+        color: $body-color;
+    }
+
+    input {
+        display: none;
+    }
+
+    &.interactive-effect {
+        input:checked+.switch-button:before {
+            animation: switch-shadow-color 0.2s;
+        }
+
+        .switch-button:before {
+            animation: switch-shadow 0.2s;
+        }
+    }
+}
+
+@keyframes switch-shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0);
+    }
+}
+
+
+@keyframes switch-shadow-color {
+    0% {
+        box-shadow: 0 0 0 0 rgba($theme, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0);
+    }
+}
+
+
+.switch-button:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    bottom: 3px;
+    left: 3px;
+    background-color: white;
+    transition: 0.4s, box-shadow 0.3s;
+    border-radius: 50px;
+}
+
+input:checked+.switch-button {
+    background-color: $theme;
+
+    &:before {
+        transform: translateX(12px);
+    }
+}
